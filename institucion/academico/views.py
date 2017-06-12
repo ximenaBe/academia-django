@@ -12,6 +12,7 @@ from django.template import RequestContext
 from academico.models import *
 import json
 
+
 def index(request):
     
     diccionario = {'saludo': "Hola Mundo"}
