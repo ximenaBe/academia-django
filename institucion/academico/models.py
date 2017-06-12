@@ -50,6 +50,8 @@ class Paralelo(models.Model):
         managed = False
         db_table = 'paralelo'
 
+    def __unicode__(self):
+        return "%s - %s - %s" % (self.id_paralelo, self.nombre, self.la_periodo)
 
 class ParaleloEstudiante(models.Model):
     id_paralelo_estudiante = models.AutoField(primary_key=True)

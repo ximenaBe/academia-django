@@ -35,9 +35,14 @@ def materia(request, id):
         obtengo las materias 
     """
     materia = Materia.objects.get(pk=id)
-    diccionario = {'materia': materia, 'mensaje': 'Mensaje de la pantalla'}
+    numero_paralelos = Paralelo.objects.filter(la_materia=materia).count()
+    numero_estudiantes = Estudiante.objects.filter(
+            paraleloestudiante__la_paralelo__la_materia=materia).count()
+    diccionario = {'materia': materia, 'numero_paralelos': numero_paralelos,
+                   'mensaje': 'Mensaje de la pantalla', 
+                   'numero_estudiantes': numero_estudiantes}
     return render(request, 'materia.html', diccionario, 
-        context_instance=RequestContext(request))
+                  context_instance=RequestContext(request))
 
 
 
