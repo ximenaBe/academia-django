@@ -86,9 +86,9 @@ WSGI_APPLICATION = 'institucion.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'base_academico',
-        'USER': 'reroes',
-        'PASSWORD': 'reroes',
+        'NAME': 'base-aqui',
+        'USER': 'usuario',
+        'PASSWORD': 'clave',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
