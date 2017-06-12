@@ -27,6 +27,7 @@ class Estudiante(models.Model):
     def __unicode__(self):
         return "%s - %s -%s" % (self.id_estudiante, self.nombre, self.apellido)
 
+
 class Materia(models.Model):
     id_materia = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50, blank=True, null=True)

@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block contenido %}
+<h4>Datos de una materia</h4>
+
+<hr />
+    <ul>
+        <li>{{materia.id_materia}}</li>
+        <li>{{materia.nombre}}</li>
+    </ul>
+    <hr />
+
+
+[<a href="{% url 'listado_materias' %}">lista materias</a></li>]
+
+{% endblock %}

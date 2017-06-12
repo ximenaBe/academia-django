@@ -1,0 +1,13 @@
+
+{% extends "master.html" %}
+
+{% block contenido %}
+
+<h1>{{saludo}}</h1>
+<h4>Enlaces de la aplicación</h4>
+<a href="{% url 'listado_materias'%}">Materias</a>
+
+<hr />
+
+{% endblock %}
+
